@@ -1,0 +1,64 @@
+FCFS stands for "First Come, First Served." It is a non-preemptive CPU scheduling algorithm, which means that once a process starts executing, it continues until it completes or until it voluntarily relinquishes control of the CPU.
+In FCFS scheduling, processes are executed in the order they arrive in the ready queue. The process that arrives first is the first one to be executed, followed by the second process, and so on. There is no prioritization based on the length of the process or any other criteria.
+
+SJF stands for Shortest Job First, which is a non-preemptive CPU scheduling algorithm. In SJF, the process with the shortest burst time is selected for execution first. This algorithm minimizes the average waiting time and turnaround time, making it efficient for CPU scheduling.
+
+Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slice or quantum, and the CPU scheduler switches between processes in a circular order. When a process's time slice expires, it is preempted and placed at the end of the ready queue. The scheduler then selects the next process in the queue to execute for the next time slice. This process continues until all processes have completed execution.
+
+Priority scheduling is a non-preemptive CPU scheduling algorithm where each process is assigned a priority. The process with the highest priority is selected for execution first. If two processes have the same priority, the FCFS (First Come, First Served) scheduling algorithm is used as a tie-breaker.
+
+In priority scheduling, each process is associated with a priority value, which can be an integer or a real number. A lower priority number indicates a higher priority, i.e., a process with a priority of 1 has the highest priority.
+
+Sequential file allocation is a method of allocating disk space for files in which files are stored contiguously on the disk. In this method, each file occupies a consecutive block of disk space, and the next file is stored immediately after the previous one.
+
+Indexed file allocation is a file allocation strategy where a separate index table or index block is maintained for each file. The index table contains pointers to the blocks or sectors of the file stored on the disk. Each entry in the index table corresponds to a block of the file, and the pointers indicate the location of the corresponding block on the disk.
+
+Linked file allocation is a file allocation strategy where each file is represented as a linked list of blocks. In this strategy, the operating system maintains a pointer to the first block of each file. Each block contains a pointer to the next block in the file.
+
+Paging is a memory management scheme used by operating systems to manage memory allocation for processes. In paging, the physical memory is divided into fixed-size blocks called frames, and the logical memory is divided into fixed-size blocks called pages. The size of a frame is equal to the size of a page.
+
+In single-level directory organization, all files are stored in a single directory or folder. Each file is assigned a unique name within the directory, and the operating system maintains a single-level directory structure to keep track of the files.
+
+Two-level directory is a file organization technique where the directory structure is divided into two levels: the root directory and user directories.
+
+In a two-level directory structure:
+
+The root directory is the top-level directory that contains directories for each user.
+Each user has their own directory, which may contain files and subdirectories specific to that user.
+Users cannot access files or directories outside their own directory unless granted permission by the system administrator.
+
+Hierarchical file organization is a file organization technique where files are organized in a hierarchical tree-like structure. In this structure, directories (also known as folders) can contain files and subdirectories, and each subdirectory can further contain files and subdirectories, forming a tree-like hierarchy.
+
+In a hierarchical file organization, the root directory is the top-level directory that contains all other directories and files. Subdirectories can be nested within other directories, allowing for a structured organization of files and directories.
+
+The Banker's algorithm is a deadlock avoidance algorithm used in operating systems to manage the allocation of multiple resources to multiple processes. It is particularly useful in systems where resources are shared among multiple processes, and deadlocks can occur if resources are not allocated properly.
+
+FCFS stands for First-Come, First-Served, and it's one of the simplest disk scheduling algorithms used in operating systems. In FCFS, the disk scheduling works on the principle of the first request being served first. When a request for data access is made, the operating system places it in a queue. The disk head then serves the requests in the order they were received, without any consideration of the location of the data on the disk.
+
+SCAN (also known as Elevator) is a disk scheduling algorithm used by operating systems to determine the order in which disk I/O requests are serviced. It works by moving the disk arm from one end of the disk to the other, serving all requests in between along the way. Once it reaches the end of the disk, it reverses direction and starts serving requests in the opposite direction.
+
+C-SCAN (Circular SCAN) is a disk scheduling algorithm that is an enhancement of the SCAN algorithm.
+
+In the C-SCAN algorithm, the disk arm starts at one end of the disk and moves towards the other end, servicing requests along the way. When it reaches the end of the disk, it immediately jumps back to the beginning of the disk and continues moving towards the other end. This creates a circular motion pattern, hence the name "circular" SCAN.
+
+FIFO (First-In-First-Out) is a page replacement algorithm used in operating systems to manage memory when a page fault occurs.
+
+In the FIFO algorithm, the operating system maintains a queue of pages currently in memory. When a page needs to be replaced due to a page fault (i.e., when a requested page is not present in memory), the operating system selects the page that has been in memory the longest (i.e., the page at the front of the queue) for replacement.
+
+LRU stands for Least Recently Used and is a page replacement algorithm used in operating systems to manage memory pages efficiently. In the context of virtual memory management, LRU is used to decide which page to evict from memory when a new page needs to be brought in and there is no free space available.
+
+LFU stands for Least Frequently Used, which is a page replacement algorithm used in operating systems for managing memory. In LFU, when a page needs to be replaced, the operating system selects the page that has been least frequently accessed in the past.
+
+The producer-consumer problem is a classic synchronization problem in computer science where there are two types of processes: producers and consumers, which share a common, fixed-size buffer or queue.
+
+Producers are responsible for producing data items and adding them to the buffer, while consumers consume these data items from the buffer.
+
+The challenge is to ensure that:
+
+Producers do not produce data items if the buffer is full.
+Consumers do not consume data items if the buffer is empty.
+Producers and consumers do not access the buffer at the same time, to prevent data corruption.
+
+A semaphore is a synchronization primitive used to control access to a shared resource. 
+
+In the problem, there are N philosophers sitting at a round table, with N forks placed between them. Each philosopher alternates between thinking and eating. To eat, a philosopher needs to acquire both the fork to their left and the fork to their right. Once a philosopher finishes eating, they release the forks and start thinking again.
